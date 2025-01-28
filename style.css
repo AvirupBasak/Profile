@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.nav-bar {
+    margin: 11px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    top: 0; 
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed; /* Fix the position of the nav bar */
+    width: calc(100%-22px); /* Ensure it spans the full width of the screen */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.picture {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+
+.links ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+.links  li a{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.5s ease;
+    text-decoration: none;
+}
+
+
+.links a:hover {
+    color: #1e90ff;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .profile-pic {
+        margin-bottom: 1rem;
+    }
+
+    .links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .links li {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .links li {
+        font-size: 1rem;
+    }
+
+    .links ul {
+        gap: 0.8rem;
+    }
+}
